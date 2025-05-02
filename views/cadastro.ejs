@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs')  %> 
+</head>
+<body>
+    
+    <%- include('partials/header.ejs')  %> 
+
+    <div class="container-flex">
+
+        <div class="userInfoForm">
+            <h2>Instruções de cadastro</h2>
+
+            <p>Siga as instruções abaixo para conseguir realiar o cadastro com sucesso!</p>
+
+            <ul>
+                <li>O nome do usuário deve conter no mínimo <b>4 caracteres</b> e no máximo <b>12 caracteres</b>.</li>
+
+                <li>O usuário deve possuir no mínimo <b>18 anos</b> e no máximo <b>70 anos</b>.</li>
+
+                <li>A imagem de perfil do usuário deve estar no formato <b>JPEG</b> ou <b>PNG</b>.</li>
+            </ul>
+        </div>
+
+        <form action="/data-users" method="post">
+
+            <h2>Formulário de cadastro</h2>
+            <p>cadastrar usuário</p>
+    
+            <label for="">Qual o seu nome?</label>
+            <input name="name" type="text">
+    
+            <label for="">Qual sua idade?</label>
+            <input name="age" type="number">
+    
+            <label for="">Selecione uma imagem:</label>
+            <input name="image" type="file">
+    
+            <button type="submit">Cadastrar usuário</button>
+    
+        </form>    
+
+        
+    </div>
+   
+</body>
+</html>
