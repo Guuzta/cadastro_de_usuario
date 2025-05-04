@@ -10,107 +10,24 @@
    <h1 class="title">Usuários Cadastrados</h1>
 
    <section class="users">
-        <div class="user">
-            <div class="userImg">
-                <img src="/images/link.jpg" alt="">
+        <% users.forEach(user => { %>
+            <div class="user">
+                <div class="userImg">
+                    <img src=<%=  user.image %>  alt="">
+                </div>
+                
+                <div class="userInfo">
+                    <h3>Usuário:
+                        <br>
+                        <span><%= user.name%> </span>
+                    </h3>
+                    <h3>Idade:
+                        <br>
+                        <span><%= user.age %> anos</span>
+                    </h3>
+                </div>
             </div>
-            
-            <div class="userInfo">
-                <h3>Usuário:
-                    <br>
-                    <span>Gustavo Bodziak</span>
-                </h3>
-                <h3>Idade:
-                    <br>
-                    <span>21 anos</span>
-                </h3>
-            </div>
-        </div>
-
-        <div class="user">
-            <div class="userImg">
-                <img src="/images/link.jpg" alt="">
-            </div>
-            
-            <div class="userInfo">
-                <h3>Usuário:
-                    <br>
-                    <span>Gustavo Bodziak</span>
-                </h3>
-                <h3>Idade:
-                    <br>
-                    <span>21 anos</span>
-                </h3>
-            </div>
-        </div>
-
-        <div class="user">
-            <div class="userImg">
-                <img src="/images/link.jpg" alt="">
-            </div>
-            
-            <div class="userInfo">
-                <h3>Usuário:
-                    <br>
-                    <span>Gustavo Bodziak</span>
-                </h3>
-                <h3>Idade:
-                    <br>
-                    <span>21 anos</span>
-                </h3>
-            </div>
-        </div>
-
-        <div class="user">
-            <div class="userImg">
-                <img src="/images/link.jpg" alt="">
-            </div>
-            
-            <div class="userInfo">
-                <h3>Usuário:
-                    <br>
-                    <span>Gustavo Bodziak</span>
-                </h3>
-                <h3>Idade:
-                    <br>
-                    <span>21 anos</span>
-                </h3>
-            </div>
-        </div>
-
-        <div class="user">
-            <div class="userImg">
-                <img src="/images/link.jpg" alt="">
-            </div>
-            
-            <div class="userInfo">
-                <h3>Usuário:
-                    <br>
-                    <span>Gustavo Bodziak</span>
-                </h3>
-                <h3>Idade:
-                    <br>
-                    <span>21 anos</span>
-                </h3>
-            </div>
-        </div>
-
-        <div class="user">
-            <div class="userImg">
-                <img src="/images/link.jpg" alt="">
-            </div>
-            
-            <div class="userInfo">
-                <h3>Usuário:
-                    <br>
-                    <span>Gustavo Bodziak</span>
-                </h3>
-                <h3>Idade:
-                    <br>
-                    <span>21 anos</span>
-                </h3>
-            </div>
-        </div>
+        <% }) %>
    </section>
 </body>
 </html>
