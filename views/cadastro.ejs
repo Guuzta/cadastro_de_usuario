@@ -23,25 +23,33 @@
             </ul>
         </div>
 
-        <form action="/data-users" method="post" enctype="multipart/form-data">
+        <form id="formUser" action="/data-users" method="post" enctype="multipart/form-data">
 
             <h2>Formulário de cadastro</h2>
             <p>cadastrar usuário</p>
     
             <label for="">Qual o seu nome?</label>
-            <input name="name" type="text">
+            <input name="name" type="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$">
+            <span></span>
     
             <label for="">Qual sua idade?</label>
-            <input name="age" type="number">
+            <input name="age" type="number" >
+            <span></span>
     
-            <label for="">Selecione uma imagem:</label>
-            <input name="image" type="file">
+            <label class="imageLabel" for="imageUser">Enviar imagem</label>
+            <input id="imageUser" name="image" type="file" accept=".jpeg .png">
+            <span></span>
     
             <button type="submit">Cadastrar usuário</button>
     
         </form>    
 
-        
+        <div id="myPopup" class="popup">
+            <div class="popupContent" >
+                <span id="closePopup">X</span>
+                <h3>Usuário cadastrado com sucesso!</h3>
+            </div>
+        </div>
     </div>
    
     <script src="/js/script.js"></script>

@@ -54,8 +54,6 @@ app.get('/usuarios', (req,res) => {
     const data = fs.readFileSync('public/store/user.json')
     const users = JSON.parse(data)
 
-    console.log(users)
-
     res.render('usuarios', {
         title: 'Usuários',
         users: users,
